@@ -7,7 +7,7 @@ import 'package:myapp/pages/course_detail_page.dart';
 //import 'package:elearning_platform_demo/widgets/tag.dart';
 import 'package:myapp/widgets/tag.dart';
 
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 
@@ -99,10 +99,10 @@ class CourseTile extends StatelessWidget {
                           children: [
                             Text(
                               rating,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 15, fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Icon(
@@ -140,8 +140,8 @@ class CourseTile extends StatelessWidget {
                 ],
               ),
             ),
-            Text(title, style: TextStyle(fontSize: 16),),
-            Text(instructor, style: TextStyle(fontSize: 10, color: Colors.grey),),
+            Text(title, style: const TextStyle(fontSize: 16),),
+            Text(instructor, style: const TextStyle(fontSize: 10, color: Colors.grey),),
             const SizedBox(height: 5,),
             Row(
               children: [

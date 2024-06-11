@@ -56,12 +56,12 @@ class _MainTabBarPageState extends State<MainTabBarPage> {
       selectedItemColor: Colors.white,
       currentIndex: selectedIndex,
       onTap: onItemTapped,
-      items: [
-          BottomNavigationBarItem(icon: Icon(IconlyBold.play), label: "Courses"),
-          BottomNavigationBarItem(icon: Icon(IconlyBold.buy), label: "Cart"),
-          BottomNavigationBarItem(icon: Icon(IconlyBold.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(IconlyBold.bookmark), label: "My Courses"),
-          BottomNavigationBarItem(icon: Icon(IconlyBold.profile), label: "Profile"),
+      items: const [
+          BottomNavigationBarItem(icon: Icon(IconlyBold.play), label: "Cursos"),
+          BottomNavigationBarItem(icon: Icon(IconlyBold.buy), label: "Carrito"),
+          BottomNavigationBarItem(icon: Icon(IconlyBold.home), label: "Inicio"),
+          BottomNavigationBarItem(icon: Icon(IconlyBold.bookmark), label: "Mis cursos"),
+          BottomNavigationBarItem(icon: Icon(IconlyBold.profile), label: "Perfil"),
       ],
     );
   }

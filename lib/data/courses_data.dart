@@ -6,40 +6,40 @@ import '../model/course.dart';
 final coursesData = [
   Course(
     id: '1',
-    imageUrl: 'assets/images/image1.jpeg',
+    imageUrl: 'assets/images/1.jpg',
     rating: '4.5',
     isBookmarked: false,
-    courseTitle: 'Web Development Bootcamp',
+    courseTitle: 'Curso Basico de Teologia',
     instructor: 'Dr. Angela Yu',
     price: "\$29.00",
     duration: '30hr 30mins',
-    sectionsLength: '10 Lessons',
+    sectionsLength: '10 Lecciones',
     sectionLaps: sections,
     courseTag: tags[0],
   ),
   Course(
     id: '2',
-    imageUrl: 'assets/images/image2.jpeg',
+    imageUrl: 'assets/images/2.jpg',
     rating: '4.2',
     isBookmarked: true,
-    courseTitle: 'Practical Leadership Skills',
+    courseTitle: 'Teologia Avanzada',
     instructor: 'Chris Croft',
     price: "\$20.00",
     duration: '4hr 10mins',
-    sectionsLength: '5 Lessons',
+    sectionsLength: '5 Lecciones',
     sectionLaps: sections,
     courseTag: tags[1],
   ),
   Course(
     id: '3',
-    imageUrl: 'assets/images/image3.jpeg',
+    imageUrl: 'assets/images/3.jpg',
     rating: '3.9',
     isBookmarked: true,
-    courseTitle: 'Communication Skills Master Class',
+    courseTitle: 'Teclado Basico Cristiano',
     instructor: 'Walker',
     price: "\$12.00",
     duration: '4hr 30mins',
-    sectionsLength: '5 Lessons',
+    sectionsLength: '5 Lecciones',
     sectionLaps: sections,
     courseTag: tags[2],
   ),
@@ -72,10 +72,10 @@ final coursesData = [
 ];
 
 List sections = [
-  ['Introduction to course', '20 min'],
-  ['Dive in', '4h 40 min'],
-  ['How to apply what you learned', '2h 20 min'],
-  ['Outro', '40 min'],
+  ['Introduccion al curso', '20 min'],
+  ['Contenido', '4h 40 min'],
+  ['Ejemplos y ejercicios', '2h 20 min'],
+  ['Conclusion', '40 min'],
 ];
 
-List tags = [ 'Hot', 'New', 'Best Seller', '50% discount', 'Free', ];
+List tags = [ 'Teclado', 'Nuevo', 'Best Seller', '50% discount', 'Free', ];
