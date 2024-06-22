@@ -1,5 +1,6 @@
-
-
+import 'package:myapp/pages/home_page.dart';
+import 'package:myapp/pages/list_course';
+import 'package:myapp/pages/videoTest.dart';
 
 import '../model/course.dart';
 
@@ -66,7 +67,23 @@ final coursesData = [
     price: "\$20.00",
     duration: '24hr 50mins',
     sectionsLength: '50 Lessons',
-    sectionLaps: sections,
+    sectionLaps: [
+      ['Introduccion al curso', '20 min'],
+      ['Contenido', '4h 40 min'],
+      ['Ejemplos y ejercicios', '2h 20 min'],
+      ['Conclusion', '40 min'],
+      ['Conclusion', '40 min'],
+      ['Introduccion al curso', '20 min'],
+      ['Contenido', '4h 40 min'],
+      ['Ejemplos y ejercicios', '2h 20 min'],
+      ['Conclusion', '40 min'],
+      ['Conclusion', '40 min'],
+    ],
+    pages: [
+    const HomePage(),
+    VideoTestPage(),
+    ListCoursePage(),
+  ],
     courseTag: tags[4],
   ),
 ];
@@ -75,6 +92,7 @@ List sections = [
   ['Introduccion al curso', '20 min'],
   ['Contenido', '4h 40 min'],
   ['Ejemplos y ejercicios', '2h 20 min'],
+  ['Conclusion', '40 min'],
   ['Conclusion', '40 min'],
 ];
 

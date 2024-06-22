@@ -1,5 +1,7 @@
 
 
+import 'package:flutter/material.dart';
+
 class Course {
   final String id;
   final String imageUrl;
@@ -11,22 +13,24 @@ class Course {
   final String duration;
   final String sectionsLength;
   final List sectionLaps;
+  final List<Widget> pages;
   String description;
   String courseTag;
 
   Course(
-      {required this.id,
-        required this.imageUrl,
-        required this.rating,
-        required this.isBookmarked,
-        required this.courseTitle,
-        required this.instructor,
-        required this.price,
-        required this.duration,
-        required this.sectionsLength,
-        required this.sectionLaps,
-        this.description = _description,
-        required this.courseTag});
+        {required this.id,
+          required this.imageUrl,
+          required this.rating,
+          required this.isBookmarked,
+          required this.courseTitle,
+          required this.instructor,
+          required this.price,
+          required this.duration,
+          required this.sectionsLength,
+          required this.sectionLaps,
+          this.description = _description,
+          this.pages = const [], // Add field initializer for 'Pages'
+          required this.courseTag});
 }
 
 const _description =

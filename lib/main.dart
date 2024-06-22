@@ -1,5 +1,6 @@
 import 'package:myapp/pages/course_detail_page.dart';
 import 'package:myapp/pages/home_page.dart';
+import 'package:myapp/pages/list_course';
 import 'package:myapp/pages/videoTest.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
@@ -24,12 +25,12 @@ class MainTabBarPage extends StatefulWidget {
 }
 
 class _MainTabBarPageState extends State<MainTabBarPage> {
-  int selectedIndex = 2;
+  int selectedIndex = 1;
 
   static List<Widget> tabBarPages = [
     const HomePage(),
     VideoTestPage(),
-    const HomePage(),
+    ListCoursePage(),
     const HomePage(),
     const HomePage(),
   ];

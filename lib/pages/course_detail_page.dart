@@ -3,6 +3,7 @@ import 'package:myapp/model/course.dart';
 //import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import 'package:myapp/pages/home_page.dart';
 
 class CourseDetailPage extends StatelessWidget {
   static const routeName = "/course_detail_page";
@@ -60,7 +61,7 @@ class CourseDetailPage extends StatelessWidget {
                   style: TextStyle(color: Colors.grey, fontSize: 12),
                 ),
                 const SizedBox(height: 5),
-                Text('Lessons',
+                Text('Lessons99',
                     style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20)),
                 const SizedBox(height: 5),
                 ListView.separated(
@@ -83,7 +84,13 @@ class CourseDetailPage extends StatelessWidget {
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
                         ),
                         child: ListTile(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              //MaterialPageRoute(builder: (context) => const HomePage()),
+                              MaterialPageRoute(builder: (context) => selectedCourse.pages[0]),
+                            );
+                          },
                           leading: Icon(IconlyLight.play, size: 50, color: Colors.grey,),
                           title: Text(selectionLaps[0], style: TextStyle(color: Colors.black, fontSize: 15),),
                           subtitle: Row(
