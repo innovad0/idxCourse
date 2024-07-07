@@ -38,7 +38,7 @@ class CourseSlider extends StatelessWidget {
   }
 }
 
-class CourseTile extends StatelessWidget {
+class CourseTile extends StatefulWidget {
   String? id;
   final String imageURL;
   final String rating;
@@ -61,8 +61,13 @@ class CourseTile extends StatelessWidget {
       required this.tagTitle,
       this.child = const SizedBox()});
 
+  @override
+  State<CourseTile> createState() => _CourseTileState();
+}
+
+class _CourseTileState extends State<CourseTile> {
   void selectedCourse(BuildContext context) {
-    Navigator.of(context).pushNamed(CourseDetailPage.routeName, arguments: id);
+    Navigator.of(context).pushNamed(CourseDetailPage.routeName, arguments: widget.id);
   }
 
   @override
@@ -81,7 +86,7 @@ class CourseTile extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                      image: AssetImage(imageURL), fit: BoxFit.cover)),
+                      image: AssetImage(widget.imageURL), fit: BoxFit.cover)),
               child: Stack(
                 children: [
                   Positioned(
@@ -98,7 +103,7 @@ class CourseTile extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              rating,
+                              widget.rating,
                               style: const TextStyle(
                                   fontSize: 15, fontWeight: FontWeight.bold),
                             ),
@@ -123,7 +128,7 @@ class CourseTile extends StatelessWidget {
                           shape: BoxShape.circle, color: Colors.white),
                       child: Padding(
                         padding: const EdgeInsets.all(4),
-                        child: (isBookmarked)
+                        child: (widget.isBookmarked)
                             ? const Icon(
                                 IconlyBold.heart,
                                 color: Colors.black,
@@ -140,14 +145,14 @@ class CourseTile extends StatelessWidget {
                 ],
               ),
             ),
-            Text(title, style: const TextStyle(fontSize: 16),),
-            Text(instructor, style: const TextStyle(fontSize: 10, color: Colors.grey),),
+            Text(widget.title, style: const TextStyle(fontSize: 16),),
+            Text(widget.instructor, style: const TextStyle(fontSize: 10, color: Colors.grey),),
             const SizedBox(height: 5,),
             Row(
               children: [
-                Text(price, style: TextStyle(fontSize: 14, color: Colors.yellow[900], fontWeight: FontWeight.bold),),
+                Text(widget.price, style: TextStyle(fontSize: 14, color: Colors.yellow[900], fontWeight: FontWeight.bold),),
                 const SizedBox(width: 5,),
-                Tag(title: tagTitle)
+                Tag(title: widget.tagTitle)
               ],
             ),
           ],

@@ -3,7 +3,6 @@ import 'package:myapp/model/course.dart';
 //import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
-import 'package:myapp/pages/home_page.dart';
 
 class CourseDetailPage extends StatelessWidget {
   static const routeName = "/course_detail_page";
@@ -23,12 +22,12 @@ class CourseDetailPage extends StatelessWidget {
       body: ListView(
         children: [
           Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 courseImage(selectedCourse),
-                Text(selectedCourse.courseTitle, style: TextStyle(
+                Text(selectedCourse.courseTitle, style: const TextStyle(
                   color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20
                 ),),
                 const SizedBox(height: 5,),
@@ -53,20 +52,20 @@ class CourseDetailPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10,),
-                Text('About Course',
+                const Text('Acerca del Curso',
                     style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20)),
                 const SizedBox(height: 5),
                 Text(
                   selectedCourse.description,
-                  style: TextStyle(color: Colors.grey, fontSize: 12),
+                  style: const TextStyle(color: Colors.grey, fontSize: 12),
                 ),
                 const SizedBox(height: 5),
-                Text('Lessons99',
+                const Text('Clases',
                     style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20)),
                 const SizedBox(height: 5),
                 ListView.separated(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     
                     separatorBuilder: (context, index) => const SizedBox(height: 10,),
                   itemCount: selectedCourse.sectionLaps.length,
@@ -88,11 +87,11 @@ class CourseDetailPage extends StatelessWidget {
                             Navigator.push(
                               context,
                               //MaterialPageRoute(builder: (context) => const HomePage()),
-                              MaterialPageRoute(builder: (context) => selectedCourse.pages[0]),
+                              MaterialPageRoute(builder: (context) => selectedCourse.pages[index]),
                             );
                           },
-                          leading: Icon(IconlyLight.play, size: 50, color: Colors.grey,),
-                          title: Text(selectionLaps[0], style: TextStyle(color: Colors.black, fontSize: 15),),
+                          leading: const Icon(IconlyLight.play, size: 50, color: Colors.grey,),
+                          title: Text(selectionLaps[0], style: const TextStyle(color: Colors.black, fontSize: 15),),
                           subtitle: Row(
                             children: [
                               const Icon(IconlyLight.time_circle, size: 16, color: Colors.pink,),
@@ -111,33 +110,33 @@ class CourseDetailPage extends StatelessWidget {
           )
         ],
       ),
-      floatingActionButton: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.black,
-          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-          elevation: 10
-        ),
-        onPressed: () {},
-        child: Text(
-          "Buy course for ${selectedCourse.price}",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.bold
-          ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      // floatingActionButton: ElevatedButton(
+      //   style: ElevatedButton.styleFrom(
+      //     backgroundColor: Colors.black,
+      //     padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+      //     elevation: 10
+      //   ),
+      //   onPressed: () {},
+      //   child: Text(
+      //     "Buy course for ${selectedCourse.price}",
+      //     style: const TextStyle(
+      //       color: Colors.white,
+      //       fontSize: 18,
+      //       fontWeight: FontWeight.bold
+      //     ),
+      //   ),
+      // ),
+      //floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 
   Container courseImage(Course selectedCourse) {
     return Container(
-                margin: EdgeInsets.only(top: 10, bottom: 8, right: 5),
+                margin: const EdgeInsets.only(top: 10, bottom: 8, right: 5),
                 constraints: const BoxConstraints.expand(height: 230, width: double.infinity),
                 padding: const EdgeInsets.only(left: 16, bottom: 8, right: 16),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
+                  borderRadius: BorderRadius.circular(30),
                   image: DecorationImage(
                     image: AssetImage(selectedCourse.imageUrl),
                     fit: BoxFit.cover,
@@ -151,9 +150,9 @@ class CourseDetailPage extends StatelessWidget {
                       backgroundColor: Colors.white.withOpacity(0.6),
                       radius: 50,
                     ),
-                    Icon(
+                    const Icon(
                       IconlyBold.play,
-                      color: Colors.red,
+                      color: Colors.purple,
                       size: 90,
                     )
                   ],
@@ -166,7 +165,7 @@ class CourseDetailPage extends StatelessWidget {
       backgroundColor: Colors.grey[100],
       centerTitle: true,
       leading: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 5),
         child: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -177,11 +176,11 @@ class CourseDetailPage extends StatelessWidget {
             color: Colors.black,
           ),
           style: IconButton.styleFrom(
-              shape: CircleBorder(), backgroundColor: Colors.white),
+              shape: const CircleBorder(), backgroundColor: Colors.white),
         ),
       ),
       title: const Text(
-        "Course Details",
+        "Lista de capitulos",
         style: TextStyle(
           color: Colors.black,
           fontWeight: FontWeight.bold,

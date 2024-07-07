@@ -1,6 +1,5 @@
 //import 'package:elearning_platform_demo/model/category.dart';
 import 'package:myapp/model/category.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CategoryIcon extends StatelessWidget {
@@ -33,7 +32,7 @@ class CategoryIcon extends StatelessWidget {
             const SizedBox(height: 5,),
             Text(category.categoryTitle,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
+              style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
             )
           ],
         ),

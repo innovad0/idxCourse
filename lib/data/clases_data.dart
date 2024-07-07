@@ -1,13 +1,13 @@
 import 'package:myapp/cursos/teologia/ruta1.dart';
-//import 'package:myapp/pages/home_page.dart';
+import 'package:myapp/pages/home_page.dart';
 import 'package:myapp/pages/list_course';
-//import 'package:myapp/pages/videoTest.dart';
-//import 'package:myapp/pages/video_test1.dart';
+import 'package:myapp/pages/videoTest.dart';
+import 'package:myapp/pages/video_test1.dart';
 
-import '../model/course.dart';
+import '../model/clase.dart';
 
 final coursesData = [
-  Course(
+  Clases(
     id: '1',
     imageUrl: 'assets/images/1.jpg',
     rating: '4.5',
@@ -18,14 +18,9 @@ final coursesData = [
     duration: '30hr 30mins',
     sectionsLength: '10 Lecciones',
     sectionLaps: sections,
-    pages: [ //RUTAS DE LOS VIDEOS
-    const Ruta1(),
-    const Ruta1(),
-    const Ruta1(),
-    ListCoursePage()],
     courseTag: tags[0],
   ),
-  Course(
+  Clases(
     id: '2',
     imageUrl: 'assets/images/2.jpg',
     rating: '4.2',
@@ -36,14 +31,9 @@ final coursesData = [
     duration: '4hr 10mins',
     sectionsLength: '5 Lecciones',
     sectionLaps: sections,
-    pages: [ //RUTAS DE LOS VIDEOS
-    const Ruta1(),
-    const Ruta1(),
-    const Ruta1(),
-    ListCoursePage()],
     courseTag: tags[1],
   ),
-  Course(
+  Clases(
     id: '3',
     imageUrl: 'assets/images/3.jpg',
     rating: '3.9',
@@ -54,37 +44,27 @@ final coursesData = [
     duration: '4hr 30mins',
     sectionsLength: '5 Lecciones',
     sectionLaps: sections,
-    pages: [ //RUTAS DE LOS VIDEOS
-    const Ruta1(),
-    const Ruta1(),
-    const Ruta1(),
-    ListCoursePage()],
     courseTag: tags[2],
   ),
-  Course(
+  Clases(
     id: '4',
-    imageUrl: 'assets/images/5.png',
+    imageUrl: 'assets/images/image4.jpeg',
     rating: '4.0',
     isBookmarked: false,
-    courseTitle: 'El poder del perdon',
+    courseTitle: 'Excel from Beginner to Advanced',
     instructor: 'Kyle Pew',
     price: "\$22.00",
     duration: '39hr 30mins',
     sectionsLength: '50 Lessons',
     sectionLaps: sections,
-    pages: [ //RUTAS DE LOS VIDEOS
-    const Ruta1(),
-    const Ruta1(),
-    const Ruta1(),
-    ListCoursePage()],
     courseTag: tags[3],
   ),
-  Course(
+  Clases(
     id: '5',
-    imageUrl: 'assets/images/6.png',
+    imageUrl: 'assets/images/image5.jpeg',
     rating: '4.2',
     isBookmarked: true,
-    courseTitle: 'Evangelismo',
+    courseTitle: 'Public Relations: Media Crisis',
     instructor: 'Walker',
     price: "\$20.00",
     duration: '24hr 50mins',
@@ -102,8 +82,8 @@ final coursesData = [
       ['Conclusion', '40 min'],
     ],
     pages: [ //RUTAS DE LOS VIDEOS
-    const Ruta1(),
-    const Ruta1(),
+    const VideoTest1(),
+    const HomePage(),
     const Ruta1(),
     ListCoursePage(),
   ],

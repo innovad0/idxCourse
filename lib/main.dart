@@ -4,6 +4,7 @@ import 'package:myapp/pages/list_course';
 import 'package:myapp/pages/videoTest.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import 'package:myapp/pages/video_test1.dart';
 
 void main() {
   runApp(
@@ -25,14 +26,15 @@ class MainTabBarPage extends StatefulWidget {
 }
 
 class _MainTabBarPageState extends State<MainTabBarPage> {
-  int selectedIndex = 1;
+  int selectedIndex = 2;
 
   static List<Widget> tabBarPages = [
     const HomePage(),
-    VideoTestPage(),
+    const VideoTest1(),
     ListCoursePage(),
     const HomePage(),
     const HomePage(),
+    
   ];
 
   void onItemTapped(int index) {

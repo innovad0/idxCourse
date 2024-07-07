@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:iconly/iconly.dart';
+import 'package:myapp/data/courses_data.dart';
+import 'package:myapp/model/course.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoTestPage extends StatefulWidget {
+  const VideoTestPage({super.key});
+
   @override
   _VideoTestPageState createState() => _VideoTestPageState();
 }
@@ -29,10 +34,15 @@ class _VideoTestPageState extends State<VideoTestPage> {
 
   @override
   Widget build(BuildContext context) {
+
+
+    final courseID = ModalRoute.of(context)!.settings.arguments as String;
+    final selectedCourse =
+        coursesData.firstWhere((element) => element.id == courseID);
+
+
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Test'),
-      ),
+      appBar: appBar(context, selectedCourse),
 // Suggested code may be subject to a license. Learn more: ~LicenseLog:3607712509.
 // Suggested code may be subject to a license. Learn more: ~LicenseLog:1756523276.
 body: ListView(
@@ -60,4 +70,59 @@ body: ListView(
 
     );
   }
+
+
+  AppBar appBar(BuildContext context, Course selectedCourse) {
+    return AppBar(
+      backgroundColor: Colors.grey[100],
+      centerTitle: true,
+      leading: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5),
+        child: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            IconlyLight.arrow_left,
+            size: 26,
+            color: Colors.black,
+          ),
+          style: IconButton.styleFrom(
+              shape: const CircleBorder(), backgroundColor: Colors.white),
+        ),
+      ),
+      title: const Text(
+        "Course Details",
+        style: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+          fontSize: 28,
+        ),
+      ),
+      actions: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 5),
+          child: IconButton(
+            onPressed: () {},
+            icon: (selectedCourse.isBookmarked)
+                ? const Icon(
+                    IconlyBold.heart,
+                    size: 26,
+                    color: Colors.black,
+                  )
+                : const Icon(
+                    IconlyLight.heart,
+                    size: 26,
+                    color: Colors.black,
+                  ),
+          ),
+        )
+      ],
+    );
+  }
+
+
+
+
+
 }
