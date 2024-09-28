@@ -12,7 +12,7 @@ final coursesData = [
     imageUrl: 'assets/images/1.jpg',
     rating: '4.5',
     isBookmarked: false,
-    courseTitle: 'Curso Basico de Teologia',
+    courseTitle: 'Predicacion 28-08-24',
     instructor: 'Dr. Angela Yu',
     price: "\$29.00",
     duration: '30hr 30mins',
@@ -94,12 +94,12 @@ final coursesData = [
       ['Contenido', '4h 40 min'],
       ['Ejemplos y ejercicios', '2h 20 min'],
       ['Conclusion', '40 min'],
-      ['Conclusion', '40 min'],
-      ['Introduccion al curso', '20 min'],
-      ['Contenido', '4h 40 min'],
-      ['Ejemplos y ejercicios', '2h 20 min'],
-      ['Conclusion', '40 min'],
-      ['Conclusion', '40 min'],
+      // ['Conclusion', '40 min'],
+      // ['Introduccion al curso', '20 min'],
+      // ['Contenido', '4h 40 min'],
+      // ['Ejemplos y ejercicios', '2h 20 min'],
+      // ['Conclusion', '40 min'],
+      // ['Conclusion', '40 min'],
     ],
     pages: [ //RUTAS DE LOS VIDEOS
     const Ruta1(),
@@ -116,7 +116,7 @@ List sections = [
   ['Contenido', '4h 40 min'],
   ['Ejemplos y ejercicios', '2h 20 min'],
   ['Conclusion', '40 min'],
-  ['Conclusion', '40 min'],
+  
 ];
 
 List tags = [ 'Teclado', 'Nuevo', 'Best Seller', '50% discount', 'Free', ];

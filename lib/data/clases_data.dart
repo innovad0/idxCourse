@@ -12,7 +12,7 @@ final coursesData = [
     imageUrl: 'assets/images/1.jpg',
     rating: '4.5',
     isBookmarked: false,
-    courseTitle: 'Curso Basico de Teologia',
+    courseTitle: 'Predicacion 28-08-24',
     instructor: 'Dr. Angela Yu',
     price: "\$29.00",
     duration: '30hr 30mins',

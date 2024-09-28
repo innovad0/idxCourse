@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blueAccent,
       appBar: appBar(),
       body: ListView(
         children: [
@@ -39,10 +39,10 @@ class HomePage extends StatelessWidget {
                         height: 10,
                       ),
                       categorySlider(),
-                      HeaderTextField(title: "Cursos para ti", child: Tag(title: "Your Topics",),),
+                      HeaderTextField(title: "Predicaciones", child: Tag(title: "Your Topics",),),
                       const CourseSlider(),
                       const SizedBox(height: 10,),
-                      HeaderTextField(title: "Trending"),
+                      HeaderTextField(title: "Cursos"),
                       const CourseSlider()
                     ],
                   ),
@@ -77,7 +77,7 @@ class HomePage extends StatelessWidget {
   //         border: OutlineInputBorder(
   //             borderSide: const BorderSide(width: 0, style: BorderStyle.none),
   //             borderRadius: BorderRadius.circular(10)),
-  //         fillColor: Colors.black,
+  //         fillColor: Colors.blueAccent,
   //         suffixIcon: Container(
   //           padding: const EdgeInsets.all(10),
   //           margin: const EdgeInsets.all(5),
@@ -97,7 +97,7 @@ class HomePage extends StatelessWidget {
 
   AppBar appBar() {
     return AppBar(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blueAccent,
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(60),
         child: SizedBox(
@@ -117,10 +117,10 @@ class HomePage extends StatelessWidget {
                           fontSize: 22),
                     ),
                     Text(
-                      "Conoce y aprende",
+                      "Iglesia Bautista Biblica Boca del Rio",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.grey,
+                          color: Colors.white,
                           fontSize: 14),
                     ),
                   ],

@@ -52,7 +52,7 @@ class CourseDetailPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10,),
-                const Text('Acerca del Curso',
+                const Text('Acerca de',
                     style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20)),
                 const SizedBox(height: 5),
                 Text(
@@ -60,7 +60,7 @@ class CourseDetailPage extends StatelessWidget {
                   style: const TextStyle(color: Colors.grey, fontSize: 12),
                 ),
                 const SizedBox(height: 5),
-                const Text('Clases',
+                const Text('Capitulos',
                     style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20)),
                 const SizedBox(height: 5),
                 ListView.separated(
