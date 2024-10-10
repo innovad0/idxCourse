@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pages/home_page.dart';
 
-class OnboardingPageModel {
+class Onboarding0PageModel {
   final String title;
   final String description;
   final String image;
   final Color bgColor;
   final Color textColor;
 
-  OnboardingPageModel(
+  Onboarding0PageModel(
       {required this.title,
       required this.description,
       required this.image,
-      this.bgColor = const Color.fromARGB(255, 129, 26, 157),
+      this.bgColor = const Color.fromARGB(255, 221, 156, 26),
       this.textColor = Colors.white});
 }
 
-class OnboardingPage extends StatefulWidget {
-  final List<OnboardingPageModel> pages;
+class Onboarding0Page extends StatefulWidget {
+  final List<Onboarding0PageModel> pages;
 
-  const OnboardingPage({super.key, required this.pages});
+  const Onboarding0Page({super.key, required this.pages});
 
   @override
   // ignore: library_private_types_in_public_api
-  _OnboardingPageState createState() => _OnboardingPageState();
+  _Onboarding0PageState createState() => _Onboarding0PageState();
 }
 
-class _OnboardingPageState extends State<OnboardingPage> {
+class _Onboarding0PageState extends State<Onboarding0Page> {
   // Store the currently visible page
   int _currentPage = 0;
   // Define a controller for the pageview
@@ -135,21 +135,19 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         }
                       },
                         child: const Text(
-                          "Back",
+                          "Atras",
                           style: TextStyle(color: Colors.white),
                         )),
                     TextButton(
                       onPressed: () {
                         if (_currentPage == widget.pages.length - 1) {
-                            // This is the last page
-                            // Navigator.pushReplacement(
-                            // context,
-                            // MaterialPageRoute(builder: (context) => const HomePage()),
-                            // );
-                            Navigator.push(
+                          // This is the last page
+                          Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => const HomePage()),
                             );
+
+
                         } else {
                           _pageController.animateToPage(_currentPage + 1,
                               curve: Curves.easeInOutCubic,
@@ -158,8 +156,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       },
                       child: Text(
                         _currentPage == widget.pages.length - 1
-                            ? "Finish"
-                            : "Next",
+                            ? "Entrar"
+                            : "Siguiente",
                         style: const TextStyle(color: Colors.white),
                       ),
                     ),

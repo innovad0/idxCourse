@@ -1,11 +1,15 @@
 import 'package:myapp/pages/course_detail_page.dart';
-import 'package:myapp/pages/home_page.dart';
-import 'package:myapp/pages/list_course';
+
+
 import 'package:myapp/pages/onboarding_page.dart';
-import 'package:myapp/pages/videoTest.dart';
+import 'package:myapp/pages/onboarding_page0.dart';
+import 'package:myapp/pages/onboarding_page1.dart';
+import 'package:myapp/pages/onboarding_page2.dart';
+import 'package:myapp/pages/onboarding_page3.dart';
+
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
-import 'package:myapp/pages/video_test1.dart';
+
 
 void main() {
   runApp(
@@ -30,7 +34,40 @@ class _MainTabBarPageState extends State<MainTabBarPage> {
   int selectedIndex = 2;
 
   static List<Widget> tabBarPages = [
-    const HomePage(),
+    
+    Onboarding0Page(
+        pages: [
+          Onboarding0PageModel(
+            title: 'CURSOS',
+            description:
+                'El conocimiento te acerca a la verdad.',
+            image: 'assets/images/LOGOSCURSO6.png',
+            bgColor: const Color.fromARGB(255, 32, 151, 210),
+          ),
+          Onboarding0PageModel(
+            title: 'FORMACION',
+            description: 'La fe se fortalece con la comprensión.',
+            image: 'assets/images/LOGOSCURSO1.png',
+            bgColor: const Color(0xff1eb090),
+          ),
+          Onboarding0PageModel(
+            title: 'ESTUDIO',
+            description:
+                'El estudio espiritual es un viaje de crecimiento personal.',
+            image: 'assets/images/LOGOSCURSO2.png',
+            bgColor: const Color(0xfffeae4f),
+          ),
+          Onboarding0PageModel(
+            title: 'CONOCIMIENTO',
+            description: 'La sabiduría divina ilumina el camino.',
+            image: 'assets/images/LOGOSCURSO4.png',
+            bgColor: Colors.purple,
+          ),
+        ],
+      ),
+    
+    //--------------------------------
+    //const HomePage(),
     //-----------------------------------
     OnboardingPage(
         pages: [
@@ -38,55 +75,55 @@ class _MainTabBarPageState extends State<MainTabBarPage> {
             title: 'HIMNOS',
             description:
                 'Enjoy the best of the world in the palm of your hands.',
-            image: 'assets/images/ibbrLogo.png',
-            bgColor: const Color.fromARGB(255, 118, 181, 63),
+            image: 'assets/images/LOGOSHIMNOS5.png',
+            bgColor: const Color.fromARGB(255, 222, 137, 69),
           ),
           OnboardingPageModel(
             title: 'Connect with your friends.',
             description: 'Connect with your friends anytime anywhere.',
-            image: 'assets/images/image1.png',
-            bgColor: const Color(0xff1eb090),
+            image: 'assets/images/LOGOSHIMNOS4.png',
+            bgColor: const Color.fromARGB(255, 174, 128, 75),
           ),
           OnboardingPageModel(
             title: 'Bookmark your favourites',
             description:
                 'Bookmark your favourite quotes to read at a leisure time.',
-            image: 'assets/images/image2.png',
-            bgColor: const Color(0xfffeae4f),
+            image: 'assets/images/LOGOSHIMNOS2.png',
+            bgColor: const Color.fromARGB(255, 196, 98, 62),
           ),
           OnboardingPageModel(
             title: 'Follow creators',
             description: 'Follow your favourite creators to stay in the loop.',
-            image: 'assets/images/paloma.png',
-            bgColor: Colors.purple,
+            image: 'assets/images/LOGOSHIMNOS3.png',
+            bgColor: const Color.fromARGB(255, 122, 76, 6),
           ),
         ],
       ),
     //-----------------------------------
     //-----------------------------------
-    OnboardingPage(
+    Onboarding1Page(
         pages: [
-          OnboardingPageModel(
-            title: 'IGLESIA BAUTISTA BIBLICA BOCA DEL RIO',
+          Onboarding1PageModel(
+            title: 'IGLESIA',
             description:
-                'Enjoy the best of the world in the palm of your hands.',
+                'Un lugar de esperanza, fe y amor en Cristo.',
             image: 'assets/images/ibbrLogo.png',
             bgColor: Colors.indigo,
           ),
-          OnboardingPageModel(
-            title: 'Connect with your friends.',
-            description: 'Connect with your friends anytime anywhere.',
-            image: 'assets/images/image1.png',
-            bgColor: const Color(0xff1eb090),
+          Onboarding1PageModel(
+            title: 'REUNIONES',
+            description: 'Unidos en oración, fortalecidos en comunidad',      
+            image: 'assets/images/reuniones3.png',
+            bgColor: const Color.fromARGB(255, 44, 62, 165),
           ),
-          OnboardingPageModel(
+          Onboarding1PageModel(
             title: 'Bookmark your favourites',
             description:
                 'Bookmark your favourite quotes to read at a leisure time.',
             image: 'assets/images/image2.png',
             bgColor: const Color(0xfffeae4f),
           ),
-          OnboardingPageModel(
+          Onboarding1PageModel(
             title: 'Follow creators',
             description: 'Follow your favourite creators to stay in the loop.',
             image: 'assets/images/paloma.png',
@@ -96,64 +133,64 @@ class _MainTabBarPageState extends State<MainTabBarPage> {
       ),
     //-----------------------------------
     //-----------------------------------
-    OnboardingPage(
+    Onboarding2Page(
         pages: [
-          OnboardingPageModel(
+          Onboarding2PageModel(
             title: 'BIBLIOTECA',
             description:
                 'Enjoy the best of the world in the palm of your hands.',
-            image: 'assets/images/ibbrLogo.png',
-            bgColor: Color.fromARGB(255, 112, 63, 181),
+            image: 'assets/images/Biblio4.png',
+            bgColor: const Color.fromARGB(255, 112, 63, 181),
           ),
-          OnboardingPageModel(
+          Onboarding2PageModel(
             title: 'Connect with your friends.',
             description: 'Connect with your friends anytime anywhere.',
-            image: 'assets/images/image1.png',
+            image: 'assets/images/Biblio2.png',
             bgColor: const Color(0xff1eb090),
           ),
-          OnboardingPageModel(
+          Onboarding2PageModel(
             title: 'Bookmark your favourites',
             description:
                 'Bookmark your favourite quotes to read at a leisure time.',
-            image: 'assets/images/image2.png',
+            image: 'assets/images/Biblio3.png',
             bgColor: const Color(0xfffeae4f),
           ),
-          OnboardingPageModel(
+          Onboarding2PageModel(
             title: 'Follow creators',
             description: 'Follow your favourite creators to stay in the loop.',
-            image: 'assets/images/paloma.png',
+            image: 'assets/images/Biblio.png',
             bgColor: Colors.purple,
           ),
         ],
       ),
     //-----------------------------------
     //-----------------------------------
-    OnboardingPage(
+    Onboarding3Page(
         pages: [
-          OnboardingPageModel(
-            title: 'PREDICAS',
+          Onboarding3PageModel(
+            title: 'SERMONES',
             description:
                 'Enjoy the best of the world in the palm of your hands.',
-            image: 'assets/images/ibbrLogo.png',
-            bgColor: Color.fromARGB(255, 181, 63, 79),
+            image: 'assets/images/sermones2.png',
+            bgColor: const Color.fromARGB(255, 181, 63, 79),
           ),
-          OnboardingPageModel(
+          Onboarding3PageModel(
             title: 'Connect with your friends.',
             description: 'Connect with your friends anytime anywhere.',
-            image: 'assets/images/image1.png',
+            image: 'assets/images/sermones3.png',
             bgColor: const Color(0xff1eb090),
           ),
-          OnboardingPageModel(
+          Onboarding3PageModel(
             title: 'Bookmark your favourites',
             description:
                 'Bookmark your favourite quotes to read at a leisure time.',
-            image: 'assets/images/image2.png',
+            image: 'assets/images/sermones4.png',
             bgColor: const Color(0xfffeae4f),
           ),
-          OnboardingPageModel(
+          Onboarding3PageModel(
             title: 'Follow creators',
             description: 'Follow your favourite creators to stay in the loop.',
-            image: 'assets/images/paloma.png',
+            image: 'assets/images/sermones5.png',
             bgColor: Colors.purple,
           ),
         ],

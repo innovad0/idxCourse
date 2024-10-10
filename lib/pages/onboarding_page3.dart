@@ -1,32 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/pages/home_page.dart';
 
-class OnboardingPageModel {
+class Onboarding3PageModel {
   final String title;
   final String description;
   final String image;
   final Color bgColor;
   final Color textColor;
 
-  OnboardingPageModel(
+  Onboarding3PageModel(
       {required this.title,
       required this.description,
       required this.image,
-      this.bgColor = const Color.fromARGB(255, 129, 26, 157),
+      this.bgColor = Colors.blue,
       this.textColor = Colors.white});
 }
 
-class OnboardingPage extends StatefulWidget {
-  final List<OnboardingPageModel> pages;
+class Onboarding3Page extends StatefulWidget {
+  final List<Onboarding3PageModel> pages;
 
-  const OnboardingPage({super.key, required this.pages});
+  const Onboarding3Page({super.key, required this.pages});
 
   @override
   // ignore: library_private_types_in_public_api
-  _OnboardingPageState createState() => _OnboardingPageState();
+  _Onboarding3PageState createState() => _Onboarding3PageState();
 }
 
-class _OnboardingPageState extends State<OnboardingPage> {
+class _Onboarding3PageState extends State<Onboarding3Page> {
   // Store the currently visible page
   int _currentPage = 0;
   // Define a controller for the pageview
@@ -141,15 +140,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     TextButton(
                       onPressed: () {
                         if (_currentPage == widget.pages.length - 1) {
-                            // This is the last page
-                            // Navigator.pushReplacement(
-                            // context,
-                            // MaterialPageRoute(builder: (context) => const HomePage()),
-                            // );
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => const HomePage()),
-                            );
+                          // This is the last page
                         } else {
                           _pageController.animateToPage(_currentPage + 1,
                               curve: Curves.easeInOutCubic,

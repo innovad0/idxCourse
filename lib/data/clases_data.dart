@@ -1,7 +1,7 @@
 import 'package:myapp/cursos/teologia/ruta1.dart';
 import 'package:myapp/pages/home_page.dart';
 import 'package:myapp/pages/list_course';
-import 'package:myapp/pages/videoTest.dart';
+
 import 'package:myapp/pages/video_test1.dart';
 
 import '../model/clase.dart';

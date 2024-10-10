@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:myapp/data/courses_data.dart';
@@ -8,6 +9,7 @@ class VideoTestPage extends StatefulWidget {
   const VideoTestPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _VideoTestPageState createState() => _VideoTestPageState();
 }
 

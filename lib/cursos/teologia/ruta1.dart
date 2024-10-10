@@ -7,7 +7,7 @@ class Ruta1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String videoId = 'x9XTzzwNGDo'; // Reemplaza con el ID de tu video de YouTube
+    String videoId = 'zdMGlxQdKiE'; // Reemplaza con el ID de tu video de YouTube
 
     YoutubePlayerController controller = YoutubePlayerController(
       initialVideoId: videoId,
@@ -47,9 +47,9 @@ body: SingleChildScrollView(
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 41, ),
-            Text("Teologia 1", style: const TextStyle(
+            const Text("Teologia 1", style: TextStyle(
                   color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20
                 ),),
                 const SizedBox(height: 5,),

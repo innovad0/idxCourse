@@ -38,6 +38,7 @@ class CourseSlider extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class CourseTile extends StatefulWidget {
   String? id;
   final String imageURL;

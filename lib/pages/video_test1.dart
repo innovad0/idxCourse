@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoTest1 extends StatefulWidget {
-  const VideoTest1({Key? key}) : super(key: key);
+  const VideoTest1({super.key});
 
   @override
   State<VideoTest1> createState() => _VideoTest1State();
@@ -18,7 +18,7 @@ class _VideoTest1State extends State<VideoTest1> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'x9XTzzwNGDo',
+      initialVideoId: 'zdMGlxQdKiE',
       flags: const YoutubePlayerFlags(
         autoPlay: false,
         mute: false,
